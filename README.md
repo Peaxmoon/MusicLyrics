@@ -18,6 +18,30 @@ A modern overlay application that displays synchronized lyrics for songs playing
 
 > **Tip:** If you had YouTube Music open before installing the extension, refresh the tab after installation.
 
+## Requirements
+- Python 3.8+
+- kivy
+- websockets
+- pyautogui
+- unidecode
+
+## How to Run
+```sh
+# 1. (Optional) Create a virtual environment
+python -m venv env
+# Activate the environment (Windows)
+env\Scripts\activate
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the application
+python main.py
+```
+
+## Inspiration
+This project is inspired by and builds upon the excellent work of [Music-LAW-Lyrics-AnyWhere by iamdevdiv](https://github.com/iamdevdiv/Music-LAW-Lyrics-AnyWhere). Special thanks to the original author for the concept and foundation.
+
 ## Contributing
 Pull requests and suggestions are welcome! Feel free to fork the repository and submit your improvements.
 
