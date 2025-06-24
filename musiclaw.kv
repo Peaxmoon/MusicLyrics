@@ -1,0 +1,51 @@
+#:kivy 2.3.0
+#:import Window kivy.core.window.Window
+
+
+<DragButton>:
+    source: "images/drag.png"
+    center: self.parent.center
+
+    on_press: self.source = "images/drag-flipped.png"
+    on_touch_up: self.source = "images/drag.png"
+
+
+<LyricsOverlayScreen>:
+    lyric: lyric
+    drag_button: drag_button
+    exit_button: exit_button
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        width: 360
+        height: 200
+
+        DragButton:
+            id: drag_button
+            size_hint_x: None
+            width: 60
+            size_hint_y: None
+            height: 200
+
+        Label:
+            id: lyric
+            text: "Music Sujjal"
+            size_hint_x: 1
+            size_hint_y: None
+            height: 200
+            font_name: "fonts/notosans.ttf"
+            font_size: sp(24)
+            halign: "center"
+            valign: "middle"
+            text_size: self.width, self.height  # Enable wrapping
+            color: 1, 1, 1, 1
+
+        IconButton:
+            id: exit_button
+            source: "images/cross.png"
+            size_hint_x: None
+            width: 60
+            size_hint_y: None
+            height: 200
+            on_release: app.stop()

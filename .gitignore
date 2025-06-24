@@ -1,0 +1,6 @@
+env
+EXE
+__pycache__
+.idea
+build/
+dist/
